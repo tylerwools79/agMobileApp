@@ -138,27 +138,29 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text('NAME',
-                            style: TextStyle(
-                              color: Colors.grey[400],
-                              letterSpacing: 0.5,
-                            ),
-                            ),
-                            SizedBox(height:5.0),
-                            Text('$fullName',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 0.5,
-                            )
-                            ),
-                            Divider(height: 5),
-                          ],
-                        ),
+                      Expanded(
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text('NAME',
+                              style: TextStyle(
+                                color: Colors.grey[400],
+                                letterSpacing: 0.5,
+                              ),
+                              ),
+                              SizedBox(height:5.0),
+                              Text('$fullName',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 24.0,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 0.5,
+                              )
+                              ),
+                              Divider(height: 10),
+                            ],
+                          ),
+                      ),
                       Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.grey[400],
@@ -176,27 +178,29 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                    Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('PHONE NUMBER',
-                                style: TextStyle(
-                                  color: Colors.grey[400],
-                                  letterSpacing: 0.5,
-                                ),
-                              ),
-                              SizedBox(height:5.0),
-                              Text('$phoneNumber',
+                    Expanded(
+                      child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text('PHONE NUMBER',
                                   style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey[400],
                                     letterSpacing: 0.5,
-                                  )
-                              ),
-                              Divider(height: 5),
-                            ],
-                          ),
+                                  ),
+                                ),
+                                SizedBox(height:5.0),
+                                Text('$phoneNumber',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 24.0,
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 0.5,
+                                    )
+                                ),
+                                Divider(height: 10),
+                              ],
+                            ),
+                    ),
 
                       Icon(
                         Icons.arrow_forward_ios_rounded,
@@ -215,27 +219,29 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                    Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('EMAIL',
-                                style: TextStyle(
-                                  color: Colors.grey[400],
-                                  letterSpacing: 0.5,
-                                ),
-                              ),
-                              SizedBox(height:5.0),
-                              Text('$eMail',
+                    Expanded(
+                      child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text('EMAIL',
                                   style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey[400],
                                     letterSpacing: 0.5,
-                                  )
-                              ),
-                              Divider(height: 5),
-                            ],
-                          ),
+                                  ),
+                                ),
+                                SizedBox(height:5.0),
+                                Text('$eMail',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 24.0,
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 0.5,
+                                    )
+                                ),
+                                Divider(height: 10),
+                              ],
+                            ),
+                    ),
 
                       Icon(
                         Icons.arrow_forward_ios_rounded,
@@ -271,13 +277,13 @@ class _HomeState extends State<Home> {
                                   softWrap: false,
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 18.0,
+                                    fontSize: 20.0,
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 0.5,
                                   )
                               ),
 
-                            Divider(height: 5),
+                            Divider(height: 10),
                           ],
                         ),
                       ),
@@ -291,8 +297,7 @@ class _HomeState extends State<Home> {
               ),
             ), //About Me
           ]
-        )
-
+        ),
       )
     );
   }
