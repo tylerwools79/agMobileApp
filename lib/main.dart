@@ -27,10 +27,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String fullName='';
-  String phoneNumber = '';
-  String eMail = '';
-  String aboutMe = '';
+  String fullName='John Doe';
+  String phoneNumber = '1(555)-555-5555';
+  String eMail = 'john.doe@email.com';
+  String aboutMe = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis facilisis velit vitae tincidunt. Aliquam finibus, justo eget mattis elementum, tortor ex iaculis erat, consectetur consectetur mi elit ut justo. Etiam non tortor finibus, luctus justo sed, fringilla orci. Aenean sagittis tempus consectetur. In in egestas quam, et semper diam';
   String profilePicPath='assets/missing texture.jpg';
   void _awaitName(BuildContext context) async {
     final result = await Navigator.push(
