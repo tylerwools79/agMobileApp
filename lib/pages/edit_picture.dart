@@ -20,9 +20,11 @@ class _EditPicState extends State<EditPic> {
           elevation: 0,
         ),
         body: Padding(
-          padding: EdgeInsets.all(30),
+          padding: EdgeInsets.fromLTRB(30,10,30,30),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+
             children: <Widget>[
               Text('Upload a photo of yourself:',
                 style: TextStyle(

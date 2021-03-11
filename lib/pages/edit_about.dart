@@ -24,9 +24,10 @@ class _EditAboutState extends State<EditAbout> {
           elevation: 0,
         ),
         body: Padding(
-          padding: EdgeInsets.all(30),
+          padding: EdgeInsets.fromLTRB(30,10,30,30),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Text('What type of passenger are you?',
                 style: TextStyle(
@@ -35,17 +36,22 @@ class _EditAboutState extends State<EditAbout> {
                 ),
               ),
               SizedBox(height: 5,),
-              TextField(
-                  maxLines: 5,
-                  controller: myController,
-                  decoration: InputDecoration(
-                    hintText: 'Write a little bit about yourself. Do you like chatting? Are you a smoker? Do you bring pets with you? Etc.',
-                  ),
-                  style: TextStyle(
-                    letterSpacing: 1.5,
-                    fontWeight: FontWeight.bold,
-                  ),
+              Container(
+                decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
+                child: TextField(
+                    maxLines: 5,
+                    controller: myController,
+                    decoration: InputDecoration(
+                      hintText: 'Write a little bit about yourself. Do you like chatting? Are you a smoker? Do you bring pets with you? Etc.',
+                    ),
+                    style: TextStyle(
+                      letterSpacing: 1.5,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                ),
               ),
+              Expanded(child: SizedBox(height: 5,)),
               RaisedButton(
                 onPressed: (){_sendDataBack(context);},
                 color: Colors.black,

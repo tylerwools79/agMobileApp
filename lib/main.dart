@@ -8,10 +8,10 @@ import 'package:ag_coding_project/pages/edit_picture.dart';
 
 
 void main() =>  runApp(MaterialApp(
-  initialRoute: '/home',
+  //initialRoute: '/home',
   routes: {
     '/': (context)=> Home(),
-    '/home':(context)=> Home(),
+    //'/home':(context)=> Home(),
     '/name': (context)=> EditName(),
     '/phone': (context)=> EditPhone(),
     '/email': (context)=> EditEmail(),
@@ -102,7 +102,6 @@ class _HomeState extends State<Home> {
                       Navigator.pushNamed(context,'/picture');
                       setState((){ //this does not work yet!
                         profilePicPath='assets/default.jpg';
-                        print('Change profile pic');
                       });
                     },
                     child: new Stack(
@@ -148,7 +147,7 @@ class _HomeState extends State<Home> {
                               letterSpacing: 0.5,
                             ),
                             ),
-                            //SizedBox(height:5.0),
+                            SizedBox(height:5.0),
                             Text('$fullName',
                             style: TextStyle(
                               color: Colors.black,
@@ -157,7 +156,7 @@ class _HomeState extends State<Home> {
                               letterSpacing: 0.5,
                             )
                             ),
-                            Divider(height: 10),
+                            Divider(height: 5),
                           ],
                         ),
                       Icon(
@@ -186,7 +185,7 @@ class _HomeState extends State<Home> {
                                   letterSpacing: 0.5,
                                 ),
                               ),
-                              //SizedBox(height:5.0),
+                              SizedBox(height:5.0),
                               Text('$phoneNumber',
                                   style: TextStyle(
                                     color: Colors.black,
@@ -195,7 +194,7 @@ class _HomeState extends State<Home> {
                                     letterSpacing: 0.5,
                                   )
                               ),
-                              Divider(height: 10),
+                              Divider(height: 5),
                             ],
                           ),
 
@@ -225,7 +224,7 @@ class _HomeState extends State<Home> {
                                   letterSpacing: 0.5,
                                 ),
                               ),
-                              //SizedBox(height:5.0),
+                              SizedBox(height:5.0),
                               Text('$eMail',
                                   style: TextStyle(
                                     color: Colors.black,
@@ -234,7 +233,7 @@ class _HomeState extends State<Home> {
                                     letterSpacing: 0.5,
                                   )
                               ),
-                              Divider(height: 10),
+                              Divider(height: 5),
                             ],
                           ),
 
@@ -265,7 +264,7 @@ class _HomeState extends State<Home> {
                                 letterSpacing: 0.5,
                               ),
                             ),
-                           // SizedBox(height:5.0),
+                            SizedBox(height:5.0),
                             Text('$aboutMe',
                                   maxLines: 5,
                                   overflow: TextOverflow.ellipsis,
@@ -278,7 +277,7 @@ class _HomeState extends State<Home> {
                                   )
                               ),
 
-                            Divider(height: 10),
+                            Divider(height: 5),
                           ],
                         ),
                       ),

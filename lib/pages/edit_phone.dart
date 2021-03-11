@@ -24,8 +24,9 @@ class _EditPhoneState extends State<EditPhone> {
           elevation: 0,
         ),
         body: Padding(
-          padding: EdgeInsets.all(30),
+          padding: EdgeInsets.fromLTRB(30,10,30,30),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Text('What\'s your phone number?',
@@ -34,30 +35,27 @@ class _EditPhoneState extends State<EditPhone> {
                   fontSize: 26,
                 ),
               ),
-              SizedBox(height: 5,),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text('YOUR PHONE NUMBER',
-                      style: TextStyle(
-                        color: Colors.grey[400],
-                      ),
-                    ),
-                    TextField(
-                      controller: myController,
-                      style: TextStyle(
-                        letterSpacing: 1.5,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+              SizedBox(height: 20,),
+              Container(
+                decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Your phone number',
+                    labelStyle: TextStyle(color: Colors.grey[400]),
+                  ),
+                  controller: myController,
+                  style: TextStyle(
+                    letterSpacing: 1.5,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
+              Expanded(child: SizedBox(height:20,)),
               RaisedButton(
                 onPressed: (){_sendDataBack(context);},
                 color: Colors.black,
+
                 child: Text('Update',
                   style: TextStyle(color: Colors.white,),),
               ),

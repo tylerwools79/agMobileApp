@@ -29,83 +29,77 @@ class _EditNameState extends State<EditName> {
         elevation: 0,
       ),
       body: Padding(
-        padding: EdgeInsets.all(30),
-
+        padding: EdgeInsets.fromLTRB(30,10,30,30),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Text('What\'s your name?',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 26,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0,0,0,15),
+                child: Text('What\'s your name?',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 26,
+                    ),
                   ),
-                ),
-              SizedBox(height: 5,),
-              Expanded(
-                child: Row(
+              ),
+              SizedBox(height: 20,),
+              Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text('First Name',
-                            style: TextStyle(
+                      child: Container(
+                        decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            labelText: 'First Name',
+                            //border: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey[300], width: 2,)),
+                            labelStyle: TextStyle(
                               color: Colors.grey[400],
-
                             ),
+                            contentPadding: EdgeInsets.all(8),
                           ),
-                          Expanded(
-                            //padding: const EdgeInsets.all(10),
-                            child: TextField(
-                              controller: myController1,
-                              style: TextStyle(
-                                fontSize: 24,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          controller: myController1,
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
-                        ],
+                        ),
                       ),
                     ),
+                    SizedBox(width: 5),
                     Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text('Last Name',
-                            style: TextStyle(
-                              color: Colors.grey[400],
-
-                            ),
+                      child: Container(
+                        decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
+                        child:  TextField(
+                          decoration: InputDecoration(
+                            labelText: 'Last Name',
+                            labelStyle: TextStyle(color: Colors.grey[400]),
+                            contentPadding: EdgeInsets.all(8),
                           ),
-                          Expanded(
-                            //padding: const EdgeInsets.all(10),
-                            child: TextField(
-                                controller: myController2,
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                          controller: myController2,
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
-                        ],
+                        ),
                       ),
                     ),
                   ],
                 ),
-              ),
-
-              RaisedButton(
-                onPressed: (){
-                  _sendDataBack(context);
-                },
-                color: Colors.black,
-                  child: Text('Update',
-                  style: TextStyle(color: Colors.white,),),
+                Expanded(
+                  child: SizedBox(height: 20,)
                 ),
-
+                RaisedButton(
+                  onPressed: (){
+                    _sendDataBack(context);
+                  },
+                  color: Colors.black,
+                    child: Text('Update',
+                    style: TextStyle(color: Colors.white,),),
+                  ),
             ],
           ),
       )
