@@ -37,7 +37,7 @@ class _EditPicState extends State<EditPic> {
               SizedBox(height: 10),
 
               RaisedButton(
-                onPressed: (){print('Confirm pressed');
+                onPressed: (){print('Update Profile Pic pressed');
                 Navigator.pop(context,this);
                 },
                 color: Colors.black,

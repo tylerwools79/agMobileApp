@@ -39,7 +39,8 @@ class _HomeState extends State<Home> {
           builder: (context) => EditName(),
         ));
     setState((){
-      fullName=result;
+      if(result!=null)
+        fullName=result;
     });
   }
   void _awaitPhone(BuildContext context) async {
@@ -49,7 +50,8 @@ class _HomeState extends State<Home> {
           builder: (context) => EditPhone(),
         ));
     setState(() {
-      phoneNumber = result;
+      if(result!=null)
+        phoneNumber = result;
     });
   }
   void _awaitEmail(BuildContext context) async {
@@ -59,7 +61,8 @@ class _HomeState extends State<Home> {
           builder: (context) => EditEmail(),
         ));
     setState(() {
-      eMail = result;
+      if(result!=null)
+        eMail = result;
     });
   }
   void _awaitAbout(BuildContext context) async {
@@ -69,7 +72,8 @@ class _HomeState extends State<Home> {
           builder: (context) => EditAbout(),
         ));
     setState((){
-      aboutMe=result;
+      if(result != null)
+        aboutMe=result;
     });
   }
   @override
